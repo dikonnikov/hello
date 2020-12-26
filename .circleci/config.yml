@@ -12,7 +12,9 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: pylint hello.py
+          command: |
+            . venv/bin/activate pylint
+            amke lint
           name: Test
 
 workflows:
